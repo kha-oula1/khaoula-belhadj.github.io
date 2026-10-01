@@ -58,4 +58,4 @@
 ![missingno](https://img.shields.io/badge/missingno-6E40C9?style=flat)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 ## Contact
-[LinkedIn](https://www.linkedin.com/in/khaoula-belhadj-05aab829a) · [Credly](https://www.credly.com/users/khaoula-belhadj/) · [Email](belhadjkhaoula07@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/khaoula-belhadj-05aab829a) · [Credly](https://www.credly.com/users/khaoula-belhadj/) · belhadjkhaoula07@gmail.com
