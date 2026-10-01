@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khaoula Belhadj | IoT & AI Master's Student, Cloud DevSecOps</title>
+<meta name="description" content="Khaoula Belhadj, Master's student in Internet of Things and Artificial Intelligence. Networks, cloud DevSecOps, IoT and AI.">
+<style>
+:root{--bg:#fff9f3;--bg2:#ffffff;--card:#ffffff;--line:#f0dcea;--text:#2b2350;--text2:#463d73;--muted:#6b6490;--a:#d6246e;--b:#7c3aed;--chip:#f5ecff;--chipt:#6d28d9;--y:#ffb703;--t:#0ea5a4}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--a);outline-offset:3px}
+.wrap{max-width:1040px;margin:auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,249,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-weight:700;font-size:1.1rem;text-decoration:none}
+.logo span{color:var(--a)}
+nav ul{display:flex;gap:20px;list-style:none;font-size:.9rem}
+nav ul a{color:var(--muted);text-decoration:none}
+nav ul a:hover{color:var(--a)}
+.hero{padding:90px 0 50px}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.photo{width:260px;height:260px;border-radius:50%;object-fit:cover;border:5px solid var(--y);box-shadow:8px 8px 0 var(--a);flex-shrink:0}
+.pill{display:inline-block;background:#ffe4f0;border:1px solid var(--a);color:var(--a);font-weight:600;border-radius:20px;padding:4px 14px;font-size:.82rem;margin-bottom:22px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.4rem,7vw,4rem);line-height:1.1;font-weight:700}
+h1 em,h2 em{color:var(--a);font-style:italic}
+.sub{color:var(--muted);font-size:1.15rem;margin-top:14px;max-width:620px}
+.cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 22px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.95rem}
+.btn.p{background:var(--a);color:#fff}.btn.p:hover{background:var(--b)}
+.btn.s{border:1px solid var(--line);color:var(--text)}
+.btn.s:hover{border-color:var(--a)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:50px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-bottom:5px solid var(--y);border-radius:14px;padding:18px}.stat:nth-child(2){border-bottom-color:var(--a)}.stat:nth-child(3){border-bottom-color:var(--b)}.stat:nth-child(4){border-bottom-color:var(--t)}
+.stat b{display:block;font-family:Georgia,serif;font-size:2rem;color:var(--b)}
+.stat span{color:var(--muted);font-size:.88rem}
+section{padding:56px 0}
+.kicker{color:var(--muted);font-size:.9rem;margin-bottom:6px}
+h2{font-family:Georgia,serif;font-size:clamp(1.7rem,4vw,2.2rem);margin-bottom:26px}
+.about p{max-width:760px;color:var(--text2);margin-bottom:14px}
+.tl{border-left:2px solid #f3b6d3;padding-left:22px}
+.item{position:relative;margin-bottom:26px}
+.item::before{content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--y);border:2px solid var(--a)}
+.item h3{font-size:1.05rem}
+.item .meta{color:var(--muted);font-size:.86rem;margin:2px 0 8px}
+.item ul{margin-left:18px;color:var(--text2);font-size:.95rem}
+.item li{margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{background:var(--chip);border:1px solid transparent;color:var(--chipt);font-size:.78rem;padding:2px 11px;border-radius:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--a);border-radius:16px;padding:22px;display:flex;flex-direction:column;box-shadow:0 6px 18px rgba(124,58,237,.08)}.card:nth-child(3n+2){border-top-color:var(--b)}.card:nth-child(3n){border-top-color:var(--t)}
+.card:hover{border-color:var(--a)}
+.card .ico{font-size:1.6rem;margin-bottom:8px}
+.card h3{font-size:1.08rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.93rem;flex:1}
+.card .go{margin-top:14px;color:var(--a);font-weight:600;font-size:.9rem;text-decoration:none}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.sk{background:var(--bg2);border:1px solid var(--line);border-top:5px solid var(--y);border-radius:16px;padding:20px}.sk:nth-child(4n+2){border-top-color:var(--a)}.sk:nth-child(4n+3){border-top-color:var(--b)}.sk:nth-child(4n){border-top-color:var(--t)}
+.sk h3{font-size:1rem;color:var(--text);margin-bottom:10px}
+.sk .chips{margin-top:0}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.list li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);color:var(--text2);font-size:.95rem}
+.list li small{color:var(--muted);display:block}
+.contact{text-align:center;background:linear-gradient(135deg,#ffe4f0,#f1e6ff 60%,#e0f7f6);border:1px solid var(--line);border-radius:22px;padding:56px 22px}
+.contact p{color:var(--muted);max-width:560px;margin:0 auto 24px}
+.contact .cta{justify-content:center}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:34px 0}
+@media(max-width:720px){nav ul{display:none}.hero{padding-top:56px}.hero-top{flex-direction:column-reverse;align-items:flex-start;gap:24px}.photo{width:160px;height:160px}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">Khaoula<span>.B</span></a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#internships">Internships</a></li>
+    <li><a href="#certs">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<main class="wrap" id="top">
+
+<header class="hero">
+  <div class="hero-top"><div class="hero-text">
+  <div class="pill">Seeking a PFE internship · IoT & AI Master's</div>
+  <h1>Khaoula <em>Belhadj</em></h1>
+  <p class="sub">Master's student in Internet of Things and Artificial Intelligence. I build complete systems, from networks and cloud to IoT and AI.</p>
+  <div class="cta">
+    <a class="btn p" href="#projects">See my projects</a>
+    <a class="btn s" href="#contact">Contact me</a>
+  </div>
+  </div>
+  <img class="photo" src="photo.jpg" alt="Khaoula Belhadj" width="260" height="260">
+  </div>
+  <div class="stats">
+    <div class="stat"><b>12</b><span>projects on GitHub</span></div>
+    <div class="stat"><b>4</b><span>internships</span></div>
+    <div class="stat"><b>6</b><span>certifications</span></div>
+    <div class="stat"><b>4</b><span>languages spoken</span></div>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="kicker">Who I am</div>
+  <h2><em>About</em> me</h2>
+  <p>I hold a degree in computer science (applied bachelor's in Networks and IT Systems Services) and have solid foundations in networking, virtualization, cloud computing and security. I am now completing a Master's in Internet of Things and Artificial Intelligence at the Higher Institute of Technological Studies of Mahdia.</p>
+  <p><strong>I am looking for a final-year internship (PFE) for my master's thesis (mémoire)</strong> in Internet of Things and Artificial Intelligence. I would like to work on a project that combines IoT, AI and cloud.</p>
+</section>
+
+<section id="education">
+  <div class="kicker">Academic background</div>
+  <h2><em>Education</em></h2>
+  <div class="tl">
+    <div class="item"><h3>Master's in Internet of Things and Artificial Intelligence</h3>
+      <div class="meta">Higher Institute of Technological Studies of Mahdia · 2025 – 2026</div></div>
+    <div class="item"><h3>Applied Bachelor's in Networks and IT Systems Services</h3>
+      <div class="meta">Higher Institute of Technological Studies of Mahdia · 2023 – 2024</div></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="kicker">Technologies and tools</div>
+  <h2>My <em>toolbox</em></h2>
+  <div class="skills">
+    <div class="sk"><h3>☁️ Cloud & DevOps</h3><div class="chips">
+      <span>AWS</span><span>Azure</span><span>Docker</span><span>Docker Swarm</span><span>Kubernetes</span><span>k3s</span><span>k3d</span><span>Terraform</span><span>Ansible</span><span>ArgoCD</span><span>Jenkins</span><span>GitHub Actions</span><span>GitLab</span><span>SonarQube</span><span>Trivy</span><span>Wazuh</span><span>Grafana</span><span>Prometheus</span><span>Vercel</span></div></div>
+    <div class="sk"><h3>🌐 Networks & Systems</h3><div class="chips">
+      <span>LAN/WAN</span><span>Routing</span><span>VLAN</span><span>DNS</span><span>DHCP</span><span>HTTP/HTTPS</span><span>SSH</span><span>Linux</span><span>Windows</span><span>Proxmox</span><span>VMware</span><span>VirtualBox</span><span>Firewalls</span><span>ACL</span><span>VPN</span><span>Proxy</span><span>GNS3</span><span>Nagios</span></div></div>
+    <div class="sk"><h3>📡 IoT & Embedded</h3><div class="chips">
+      <span>MQTT</span><span>CoAP</span><span>Zigbee</span><span>LoRaWAN</span><span>BLE</span><span>ESP32</span><span>Arduino</span><span>STM32</span><span>Raspberry Pi</span></div></div>
+    <div class="sk"><h3>🤖 AI & Data</h3><div class="chips">
+      <span>Generative AI</span><span>LLM</span><span>Agentic AI</span><span>RAG</span><span>Ollama</span><span>Machine Learning</span><span>Deep Learning</span><span>R</span><span>Data analysis</span></div></div>
+    <div class="sk"><h3>🏭 Industry 4.0</h3><div class="chips">
+      <span>MES</span><span>Industrial monitoring</span><span>Augmented reality</span></div></div>
+    <div class="sk"><h3>💻 Programming & Testing</h3><div class="chips">
+      <span>Python</span><span>Java</span><span>C/C++</span><span>C#</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>FastAPI</span><span>JUnit</span><span>NUnit</span><span>Postman</span><span>Selenium</span></div></div>
+    <div class="sk"><h3>🗄️ Big Data & Databases</h3><div class="chips">
+      <span>HDFS</span><span>MapReduce</span><span>HBase</span><span>Hive</span><span>Kafka</span><span>ZooKeeper</span><span>PostgreSQL</span><span>dbt</span><span>Oracle SQL</span><span>MongoDB</span><span>MySQL</span></div></div>
+    <div class="sk"><h3>🧭 Methods</h3><div class="chips">
+      <span>Agile Scrum</span><span>DevSecOps</span><span>OWASP</span><span>Infrastructure as Code</span></div></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="kicker">What I have built</div>
+  <h2>My <em>projects</em></h2>
+  <div class="grid">
+    <div class="card"><div class="ico">🅿️</div><h3>Smart Parking DevSecOps</h3>
+      <p>Real-time monitoring of 30 parking spots (free, reserved, occupied) with online booking. Built on a k3s cluster, then deployed to Azure Kubernetes Service, with a Jenkins pipeline using SonarQube, Trivy and OWASP, and Terraform infrastructure.</p>
+      <div class="chips"><span>K3s</span><span>AKS</span><span>Jenkins</span><span>Trivy</span><span>Grafana</span></div>
+      <a class="go" href="https://github.com/kha-oula1/Parking_DevSecOps">View on GitHub</a></div>
+
+    <div class="card"><div class="ico">🔄</div><h3>Final project DevOps</h3>
+      <p>Final-year project: a complete CI/CD pipeline in a hybrid Ubuntu WSL and Windows environment, containerization with Docker Swarm on Azure, and monitoring with Nagios Core and Nagios XI.</p>
+      <div class="chips"><span>Jenkins</span><span>Docker Swarm</span><span>Nagios XI</span></div>
+      <a class="go" href="https://github.com/kha-oula1/final_project_DevOps">View on GitHub</a></div>
+
+    <div class="card"><div class="ico">🧠</div><h3>RAG API</h3>
+      <p>A retrieval-augmented generation API served with FastAPI and a local model through Ollama, containerized with Docker, deployed on Kubernetes and tested with GitHub Actions.</p>
+      <div class="chips"><span>FastAPI</span><span>Ollama</span><span>Docker</span><span>K8s</span><span>GitHub Actions</span></div>
+      <a class="go" href="https://github.com/kha-oula1/RAG_API">View on GitHub</a></div>
+
+    <div class="card"><div class="ico">🛡️</div><h3>Security Analytics Pipeline</h3>
+      <p>A security data analytics pipeline: transformations with dbt, PostgreSQL storage, Python scripts and containerized execution with Docker.</p>
+      <div class="chips"><span>dbt</span><span>PostgreSQL</span><span>Python</span><span>Docker</span></div>
+      <a class="go" href="https://github.com/kha-oula1/security-analytics-pipeline">View on GitHub</a></div>
+
+    <div class="card"><div class="ico">🐘</div><h3>Data Engineering with Postgres & Docker MCP</h3>
+      <p>Data engineering around PostgreSQL and Docker, with an MCP server that connects the database to an AI assistant.</p>
+      <div class="chips"><span>MCP</span><span>PostgreSQL</span><span>Docker</span></div>
+      <a class="go" href="https://github.com/kha-oula1/Postgres_Docker">View on GitHub</a></div>
+
+    <div class="card"><div class="ico">⚡</div><h3>Orchestrating Parallel Event Streams with Azure</h3>
+      <p>Alert broadcasting through Azure Storage Queue and orchestration with Durable Functions: statistics updates, alert sending and logging run in parallel.</p>
+      <div class="chips"><span>Storage Queue</span><span>Durable Functions</span><span>Azure</span></div>
+      <a class="go" href="https://github.com/kha-oula1/Orchestrating-Parallel-Event-Streams-with-Azure">View on GitHub</a></div>
+  </div>
+  <p style="margin-top:22px;color:var(--muted)">These are my 6 most complete projects. <a href="https://github.com/kha-oula1?tab=repositories" style="color:var(--a);font-weight:600">See all 12 projects on GitHub</a></p>
+</section>
+
+<section id="internships">
+  <div class="kicker">Professional experience</div>
+  <h2>My <em>internships</em></h2>
+  <div class="tl">
+    <div class="item"><h3>Advanced internship: Smart Parking, automated parking management</h3>
+      <div class="meta">01/2026 – 02/2026</div>
+      <ul>
+        <li>Real-time monitoring system for 30 parking spots, developed on k3s (WSL) then deployed to Azure Kubernetes Service.</li>
+        <li>DevSecOps CI/CD pipeline with Git/GitHub and Jenkins, SonarQube, Trivy and OWASP, with infrastructure provisioned by Terraform.</li>
+        <li>Monitoring with Grafana and Prometheus, following the Agile Scrum methodology.</li>
+      </ul>
+      <div class="chips"><span>k3s</span><span>AKS</span><span>Jenkins</span><span>Terraform</span><span>Trivy</span><span>Grafana</span></div></div>
+
+    <div class="item"><h3>Final-year internship: continuous integration and deployment in a DevOps environment</h3>
+      <div class="meta">02/2024 – 05/2024</div>
+      <ul>
+        <li>Complete CI/CD pipeline (Git/GitHub, Jenkins) automating integration, testing and deployment.</li>
+        <li>Infrastructure monitoring with Nagios Core and Nagios XI.</li>
+      </ul>
+      <div class="chips"><span>Jenkins</span><span>Docker Swarm</span><span>Nagios</span><span>Azure</span></div></div>
+
+    <div class="item"><h3>Advanced internship: LAN/WAN topology simulation and configuration</h3>
+      <div class="meta">01/2023 – 02/2023</div>
+      <ul><li>Configured dynamic routing and network protocols on a GNS3 model.</li></ul>
+      <div class="chips"><span>GNS3</span><span>Dynamic routing</span></div></div>
+
+    <div class="item"><h3>Introductory internship: website creation</h3>
+      <div class="meta">01/2022 – 02/2022</div>
+      <ul><li>Built a website with HTML, CSS and JavaScript.</li></ul>
+      <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+  </div>
+</section>
+
+<section id="certs">
+  <div class="kicker">Recognition</div>
+  <h2>Certifications and <em>badges</em></h2>
+  <div class="two">
+    <div>
+      <h3 style="margin-bottom:8px">Certifications</h3>
+      <ul class="list">
+        <li>AWS IoT Core</li>
+        <li>Fundamentals of Deep Learning<small>NVIDIA</small></li>
+        <li>Building Transformer-Based Natural Language Processing Applications<small>NVIDIA</small></li>
+        <li>Multicloud Network Associate<small>Aviatrix</small></li>
+        <li>KodeKloud Engineer, Docker (Level 4)</li>
+        <li>Scrum Fundamentals Certified (SFC)<small>SCRUMstudy</small></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-bottom:8px">AWS training badges</h3>
+      <ul class="list">
+        <li>AWS Educate: Introduction to Generative AI<small>April 2026</small></li>
+        <li>AWS Cloud Quest: Cloud Practitioner<small>July 2025</small></li>
+        <li>AWS Educate: Introduction to Cloud 101<small>May 2025</small></li>
+        <li>AWS Knowledge: Cloud Essentials<small>May 2025</small></li>
+      </ul>
+      <p style="margin-top:14px"><a href="https://www.credly.com/users/khaoula-belhadj/" style="color:var(--a)">See everything on Credly</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Languages</div>
+  <h2>I <em>speak</em></h2>
+  <div class="chips" style="margin-top:0">
+    <span style="font-size:.95rem;padding:6px 16px">Arabic</span>
+    <span style="font-size:.95rem;padding:6px 16px">French</span>
+    <span style="font-size:.95rem;padding:6px 16px">English</span>
+    <span style="font-size:.95rem;padding:6px 16px">Spanish</span>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div class="kicker">Let's work together</div>
+    <h2><em>Contact</em> me</h2>
+    <p>I am looking for a final-year (PFE) internship in IoT and AI. If you have a project or an offer, feel free to write to me.</p>
+    <div class="cta">
+      <a class="btn p" href="mailto:belhadjkhaoula07@gmail.com">Send an email</a>
+      <a class="btn s" href="https://www.linkedin.com/in/khaoula-belhadj-05aab829a">LinkedIn</a>
+      <a class="btn s" href="https://github.com/kha-oula1">GitHub</a>
+      <a class="btn s" href="https://www.credly.com/users/khaoula-belhadj/">Credly</a>
+    </div>
+    <p style="margin-top:22px;margin-bottom:0">belhadjkhaoula07@gmail.com · +216 27 025 275 · Mahdia, Tunisia</p>
+  </div>
+</section>
+
+</main>
+
+<footer>© 2026 Khaoula Belhadj</footer>
+</body>
+</html>
